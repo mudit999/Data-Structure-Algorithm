@@ -1,6 +1,6 @@
 # Data-Structure-Algorithm
 
-This repository contains implementation of OOPs concepts, Searching, Sorting Algorithms, Data Structures and Algorithms 
+This repository contains implementation of Data Structures and Algorithms, OOPs concepts, Searching and Sorting Algorithms, and Collection Framework 
 
 Topics:
 - OOPS
