@@ -40,7 +40,7 @@ public class TraversalOrder {
 		postOrder(root);
 		
 		System.out.println();
-		System.out.print("PostOrder : ");
+		System.out.print("InOrder : ");
 		inOrder(root);
 
 	}
