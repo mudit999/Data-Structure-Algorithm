@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class TakeInputLevelWise {
+public class TakePrintInputLevelWise {
 
 	// Iterative solution
 	public static BinaryTreeNode<Integer> takeInputLevelWise(){
