@@ -135,7 +135,7 @@ public class BinaryTreeQues {
 	public static int largestDataInTree(BinaryTreeNode<Integer> root) {
 		// base case
 		if(root == null) {
-			return -1;
+			return Integer.MIN_VALUE;
 		}
 		int leftSubTreeLargest = largestDataInTree(root.left);
 		int rightSubTreeLargest = largestDataInTree(root.right);
