@@ -16,12 +16,11 @@ public class BSTUse {
 
 		b.printTree();
 		System.out.println(b.isPresent(5));
-		System.out.println(b.deleteData(2));
+		System.out.println(b.deleteData(8));
 		System.out.println(b.isPresent(5));
+		System.out.println(b.size());
 
-//		b.printTree();
-//		System.out.println(b.deleteData(2));
-//		b.printTree();
-//		System.out.println(b.size());
+		b.printTree();
+
 	}
 }

@@ -66,13 +66,15 @@ public class BST {
 		if(x > root.data) {
 			deleteDataReturn rightOutput = deleteDataHelper(root.right,x);
 			root.right = rightOutput.root;
-			return new deleteDataReturn(root.right, true);
+			rightOutput.root = root;
+			return rightOutput;
 		}
 		
 		if(x < root.data) {
 			deleteDataReturn leftOutput = deleteDataHelper(root.left,x);
 			root.left = leftOutput.root;
-			return new deleteDataReturn(root.left, true);
+			leftOutput.root = root;
+			return leftOutput;
 		}
 	
 		// 0 children
