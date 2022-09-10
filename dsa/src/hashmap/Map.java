@@ -83,7 +83,9 @@ public class Map<K,V> {
 		
 		// load factor
 		double loadFactor = (1.0 * count)/numBuckets;
-		if(loadFactor > 0.7) {
+		final double DEFAULT_LOAD_FACTOR = 0.75;
+		
+		if(loadFactor > DEFAULT_LOAD_FACTOR) {
 			reHash();
 		}
  	}
