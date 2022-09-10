@@ -1,4 +1,4 @@
-package hashmapInJava;
+package hashmapPractice;
 import java.util.*;
 
 public class MajorityElements {
