@@ -9,6 +9,7 @@ public class Trie {
 		// default
 		// isTerminating false
 		// all children all null 
+		// childCount is 0 
 	}
 
 	// RECURSION
@@ -23,6 +24,7 @@ public class Trie {
 		// base case
 		if(word.length() == 0) {
 			root.isTerminating = true;
+			TrieNode.wordCount++;
 			return;
 		}
 
@@ -34,6 +36,7 @@ public class Trie {
 		if(child == null) {
 			child = new TrieNode(word.charAt(0));
 			root.children[childIndex] = child; 
+			root.childCount++;
 		}
 
 		add(child, word.substring(1));
@@ -72,6 +75,7 @@ public class Trie {
 		// base
 		if(word.length() == 0) {
 			root.isTerminating = false;
+			TrieNode.wordCount--;
 			return;
 		}
 		
@@ -80,9 +84,38 @@ public class Trie {
 		TrieNode child = root.children[childIndex];
 		if(child == null) {
 			return;
-		}else {
-			// IH
-			remove(child,word.substring(1));
 		}
+	
+		// IH
+		// if not null, remove child
+		remove(child,word.substring(1));
+		
+		// Memory Optimization
+		// can we remove child from memory?
+		// we can remove child node from memory when it is non terminating and no. of children is 0
+		
+		if(!child.isTerminating && child.childCount == 0) {
+			root.children[childIndex] = null;
+			child = null;
+		}
+		
+		
+		
+//		if(!child.isTerminating) {
+//			// In child node, go to children array and check if there is any child present, maintain count  
+//			int noChildNode = 0;
+//			
+//			for(int i = 0 ; i<26; i++) {
+//				if(child.children[i] != null) {
+//					noChildNode++;
+//				}
+//			}
+//			
+//			if(noChildNode == 0) {
+//				// we can delete child
+//				root.children[childIndex] = null;
+//				child = null; // not required
+//			}
+//		}
 	}
 }
