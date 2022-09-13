@@ -2,7 +2,7 @@ package recursionThree;
 
 public class ReturnSubsequence {
 
-	public static String[] printSubSequence(String input) {
+	public static String[] returnSubSequence(String input) {
 		// base case
 		if(input.length() == 0) {
 			String[] output = new String[1];
@@ -13,7 +13,7 @@ public class ReturnSubsequence {
 
 		// IH
 		char firstChar = input.charAt(0);
-		String[] smallOutput = printSubSequence(input.substring(1));
+		String[] smallOutput = returnSubSequence(input.substring(1));
 
 		// IS
 		String[] output = new String[2*smallOutput.length];
@@ -32,7 +32,7 @@ public class ReturnSubsequence {
 
 	public static void main(String[] args) {
 		String input = "abc";
-		String[] ansArr = printSubSequence(input);
+		String[] ansArr = returnSubSequence(input);
 
 		for(String item :ansArr) {
 			System.out.println(item);

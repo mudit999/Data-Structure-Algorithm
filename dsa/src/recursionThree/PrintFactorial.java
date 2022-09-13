@@ -15,11 +15,20 @@ public class PrintFactorial {
 		System.out.println(ans);
 	}
 	
-	public static void factorial2(int n) {
+	public static void factorial2(int input, int answer) {
+		// base case
+		if(input == 0) {
+			System.out.println(answer);
+			return;
+		}
 		
+		answer = answer * input;
+		factorial2(input - 1, answer);
 	}
 	
 	public static void main(String[] args) {
-		factorial(5);
+//		factorial(5);
+		// initial value of ans = 1
+		factorial2(5, 1);
 	}
 }
