@@ -53,10 +53,34 @@ public class RatInAMaze {
 		return solveMaze(maze, path, 0,0);
 	}
 	
-	
 	public static void main(String[] args) {
 		int[][] maze = {{1,1,0},{1,1,0},{1,1,1}};
 		boolean ans = ratInAMaze(maze);
 		System.out.println(ans);
 	}
 }
+
+
+
+// Changes in solution by TA - Both my and TA solution works fine
+
+//public static void solveMazeAllPossiblePath(int maze[][], int n, int i, int j, int path[][]){
+//    if(i==n-1 && j==n-1){
+//        path[i][j]=1;
+//        for(int r=0;r<n;r++){
+//            for(int c=0;c<n;c++){
+//                System.out.print(path[r][c] + " ");
+//            }
+//        }
+//        
+//        System.out.println();
+//        return;
+//    }
+//    if(i<0 || j<0 || i>=n || j>=n || maze[i][j]==0 || path[i][j]==1){return ;}
+//    path[i][j]=1;
+//    solveMazeAllPossiblePath(maze, n, i-1, j, path);
+//    solveMazeAllPossiblePath(maze, n, i+1, j, path);
+//    solveMazeAllPossiblePath(maze, n, i, j-1, path);
+//    solveMazeAllPossiblePath(maze, n, i, j+1, path);
+//    path[i][j]=0;
+//}	
