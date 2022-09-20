@@ -12,7 +12,13 @@ Topics:
 - Stack
 - Queues
 - Binary Trees
+- Binary Search Trees
+- Trees
 - HashMap, Map
+- Priority Queue
+- Tries
+- Dynamic Programming
+- Graphs
 - Collection Framework
 - Searching Algorithm: Linear and Binary Search
 - Sorting Algo : Insertion, Bubble, Selection, Merge and Quick Sort
