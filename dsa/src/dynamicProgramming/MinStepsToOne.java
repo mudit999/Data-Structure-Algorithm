@@ -27,7 +27,7 @@ public class MinStepsToOne {
 		
 	}
 	
-	// Getting wrong answer
+// Getting wrong answer
 	
 //	public static int minStepToOneDpIterative(int n) {
 //		if(n == 1) {
@@ -37,7 +37,7 @@ public class MinStepsToOne {
 //		int[] dp = new int[n+1];
 //		dp[1] = 0;
 //		
-//		int ans1, ans2 = Integer.MAX_VALUE, ans3 = Integer.MAX_VALUE;
+//		int ans1 = Integer.MAX_VALUE, ans2 = Integer.MAX_VALUE, ans3 = Integer.MAX_VALUE;
 //		
 //		for(int i = 2 ; i <= n;i++) {
 //			
@@ -112,12 +112,10 @@ public class MinStepsToOne {
 		System.out.println("Recursive DP ans: ");
 		System.out.println(minStepToOneDp(n, dp));
 		System.out.println();
-		
-//		----------------------------------------------
-		
+				
 		System.out.println("Recursive ans: ");
 		System.out.println(minStepToOne(n));
-//		System.out.println();
+		System.out.println();
 		
 //		System.out.println("Iterative DP ans: ");
 //		System.out.println(minStepToOneDpIterative(n));
