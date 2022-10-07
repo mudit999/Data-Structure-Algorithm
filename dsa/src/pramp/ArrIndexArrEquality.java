@@ -12,7 +12,9 @@ public class ArrIndexArrEquality {
 	      int mid = (left + right)/2;
 	      int num = arr[mid];
 	      
-	      if(num - mid >= 0){ // check this line: num - its index
+	      int target = mid - num;
+	      
+	      if(target >= 0){
 	        right = mid;
 	      }else{
 	        left = mid + 1;
