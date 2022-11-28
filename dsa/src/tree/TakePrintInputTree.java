@@ -10,7 +10,7 @@ public class TakePrintInputTree {
 		
 		TreeNode<Integer> root = new TreeNode<Integer>(n);
 		
-		System.out.println("Enter child of: " + n);
+		System.out.println("Enter total child of: " + n);
 		int childCount = scan.nextInt();
 		
 		for(int i = 0 ; i<childCount ; i++) {
